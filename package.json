@@ -6,11 +6,13 @@
   "author": "simon-verhoeven <simonaverhoeven@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "postcss-cli": "^8.3.1"
+    "nodemon": "^2.0.7",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss-cli": "^0.1.2"
   },
   "scripts": {
-    "build": "npx tailwindcss-cli@latest build tailwind.css -o dist/css/styles.css",
-    "watch": "npx tailwindcss-cli@latest build tailwind.css -o dist/css/styles.css --watch"
+    "build": "yarn tailwindcss-cli build tailwind.css -o dist/css/styles.css",
+    "watch": "nodemon -x yarn build -w tailwind.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
